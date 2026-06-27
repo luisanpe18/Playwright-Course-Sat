@@ -1,5 +1,5 @@
 /* ¿Que es un fixture?, es page, request, browser, son clases o modulos que ayudan a generar las pruebas */
-
+//comentario
 import { test, expect } from '@playwright/test';
 /*
   Para que al momento de ejecutar tome un driver especifico para la ejecución
