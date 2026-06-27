@@ -1,0 +1,29 @@
+{
+  "name": "Curso_Playwright_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "RunTest": "playwright test",
+    "Report": "playwright show-report",
+    "RunTest:Chrome": "playwright test --project=chromium",
+    "RunTest:Headed": "playwright test --headed",
+    "RunTest:Debug": "playwright test --debug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.6.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.3",
+    "dotenv": "^17.4.2"
+  }
+}
