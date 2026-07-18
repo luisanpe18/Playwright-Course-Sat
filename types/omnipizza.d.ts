@@ -12,10 +12,10 @@ export interface User {
 export interface Market {
     code: CountryCode;
     currency: Currency;
-    fullname: string;
+    fullName: string;
     phone: string;
     address: string;
     colonia?: string;
-    zipcode: string;
-    taxrate?: number;
+    zipCode: string;
+    taxRate?: number;
 }
