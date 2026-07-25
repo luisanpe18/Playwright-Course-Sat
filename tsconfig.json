@@ -47,6 +47,7 @@
     "tests/**/*.ts",
     "Module-*/**/*.ts",
     "types/**/*.d.ts",
-    "types/**/*.ts"
+    "types/**/*.ts",
+    "pages/**/*.ts"
   ]
 }
