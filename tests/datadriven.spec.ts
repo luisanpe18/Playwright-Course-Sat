@@ -21,7 +21,7 @@ if (!standardUser){
 //Si se quisieran usar todos se quita el partial, caso contrario se coloca y se especifica cuales se usara
 const currencySymbol: Partial<Record<Currency, string>> = {
     MXN: "$",
-    JYP: "￥"
+    JPY: "￥"
 }
 
 test.describe("Smoke parametrized by market", () => {
