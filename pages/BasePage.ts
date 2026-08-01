@@ -1,24 +1,25 @@
 import { Page, Locator } from "@playwright/test";
 
-//Clase = modelo
+//clase = modelo
 export class BasePage{
-    
-    //Constructor explicito
+ 
+    // constructor explícito
     constructor(protected readonly page: Page){}
 
-    //Método = accion
-    protected test_ID(base: string): Locator{
+    // método = acción
+    protected tid(base: string): Locator{
         const size = this.page.viewportSize();
         const suffix = size && size.width < 768 ? "-responsive" : "-desktop";
         return this.page.getByTestId(`${base}${suffix}`).or(this.page.getByTestId(base)).first();
     }
 
-    protected async waitForUrl(pattern : RegExp, timeout = 15_000) : Promise<void> {
+    protected async waitForUrl(pattern: RegExp, timeout = 15_000): Promise<void> {
         await this.page.waitForURL(pattern, {timeout});
+    }  
+
+    async screenshot(name: string): Promise<void>{
+        await this.page.screenshot({path: `test-results/${name}.png`});
     }
 
-    public async screenshot(screen: string): Promise<void>{
-        await this.page.screenshot({path: `test-results/${screen}.png`})
-    }
-
+    
 }
